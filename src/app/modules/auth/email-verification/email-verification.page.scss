@@ -1,0 +1,35 @@
+.style-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.style-business {
+    width: 30% !important;
+    height: 30% !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.style-enter {
+    text-transform: none !important;
+    font-size: medium !important;
+    color: white !important;
+}
+
+ion-col.style-column {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+ion-grid.style-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-content: center !important;
+    height: 100% !important; 
+}

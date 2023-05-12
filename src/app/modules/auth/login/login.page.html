@@ -1,0 +1,75 @@
+<ion-app>
+    <ion-content>
+        <ion-grid class="style-grid">
+            <ion-row>
+                <ion-col class="style-logo">
+                    <ion-img id="logo" src="assets/svg/puerta_logo.jpeg" alt="logo-image" />
+                </ion-col>
+                <ion-col size="1"></ion-col>
+                <ion-col>
+                    <ion-col>
+                        <form [formGroup]="credentials" (ngSubmit)="login()" class="style-form-login">
+                            <ion-col>
+                                <div class="ion-text-center">
+                                    <h1 *ngIf="!isAdmin">Favor de ingresar usuario y contraseña</h1>
+                                    <h1 *ngIf="isAdmin">Administra la configuracón de la aplicación</h1>
+                                </div>
+                            </ion-col>
+                        <!--   
+                            <ion-col class="style-icon-help">
+                                <ion-button fill="clear" id="click-trigger">
+                                    <ion-icon src="assets/svg/help-icon.svg" alt="help-icon" size="medium" />
+                                </ion-button>
+                                <ion-popover trigger="click-trigger" triggerAction="click">
+                                    <ng-template>
+                                        <ion-content class="ion-padding">
+                                            Ingresa el correo electrónico con el que te registraste.
+                                            <br />Escribe la contraseña designada para tu cuenta.
+                                            <br /><br />Si no tienes una cuenta, pulsa en "Regístrate" para crearla.
+                                        </ion-content>
+                                    </ng-template>
+                                </ion-popover>
+                            </ion-col>
+                        -->
+                            <ion-item lines="none">
+                                <ion-input type="email" placeholder="Correo electrónico" formControlName="email"
+                                    class="style-input-login" />
+                                <ion-note slot="error"
+                                    *ngIf="email && (!isSubmitted || email.value.length>0) && (email.dirty || email.touched) && email.errors">Correo
+                                    electrónico incorrecto</ion-note>
+                                <ion-note slot="error" *ngIf="email && isSubmitted && email.value.length<=0">Correo
+                                    electrónico es requerido</ion-note>
+                            </ion-item>
+                            <br>
+                            <ion-item lines="none">
+                                <ion-input type="password" placeholder="Contraseña" formControlName="password"
+                                    class="style-input-login" />
+                                <ion-note slot="error"
+                                    *ngIf="password && (!isSubmitted || password.value.length>0) && (password.dirty || password.touched) && password.errors">Contraseña
+                                    incorrecta</ion-note>
+                                <ion-note slot="error"
+                                    *ngIf="password && isSubmitted && password.value.length<=0">Contraseña es
+                                    requerida</ion-note>
+                            </ion-item>
+                            <ion-item lines="none">
+                                <div slot="end">
+                                    <a #hoverName (mouseenter)="onMouseEnter(hoverName)"
+                                        (mouseleave)="onMouseOut(hoverName)" href="#"
+                                        style="color: #1e2648 !important;">Olvidé mi contraseña</a>
+                                </div>
+                            </ion-item>
+                            <div class="space-around-inline-btn">
+                                <ion-button shape="round" type="button" (click)="register()" class="style-buttons"
+                                    style="width: 40%;">Regístrate</ion-button>
+                                
+                                
+                                    <ion-button shape="round" type="submit" class="style-buttons"
+                                    style="width: 40%;">Entrar</ion-button>
+                            </div>
+                        </form>
+                    </ion-col>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+</ion-app>

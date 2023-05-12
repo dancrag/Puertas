@@ -1,0 +1,36 @@
+ion-input.style-input-login {
+    border: solid 3px #52bdc0 !important;
+    border-radius: 12px !important;
+    text-align: justify !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: medium !important;
+}
+
+.style-form-login {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+ion-col.style-icon-help {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.style-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+ion-grid.style-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-content: center !important;
+    height: 100% !important; 
+}
+
+

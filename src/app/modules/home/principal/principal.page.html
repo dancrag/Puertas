@@ -1,0 +1,332 @@
+<ion-app>
+    <ion-split-pane when="sm" contentId="main-content">
+        <div class="ion-page" id="main-content">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-tabs>
+                        <ion-tab-bar class="header" slot="bottom">
+                            <div>
+                                <img src="../../../../assets/img/mapache-logo-screens.png" class="img-fluid" alt="logo" width="50px">
+                            </div>
+                            <ion-tab-button tab="home">
+                                <ion-text class="menuOp">NOSOTROS</ion-text>
+                            </ion-tab-button>
+                            <ion-tab-button tab="about">
+                                <ion-text class="menuOp">SERVICIOS</ion-text>
+                            </ion-tab-button>
+                            <ion-tab-button tab="contact">
+                                <ion-text class="menuOp">PROMOCIONES</ion-text>
+                            </ion-tab-button>
+                            <ion-tab-button tab="Servicios">
+                                <ion-text class="menuOp">CONTACTO</ion-text>
+                            </ion-tab-button>
+                            <div class="bar bar-footer bar-balanced">
+                                <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                    <ion-icon name="logo-facebook" class="redes"></ion-icon>
+                                </a>
+                                <a href="https://wa.me/5544973237?text=Hola,%20quiero%20hacer%20una%20consulta" class="ion-activatable" target="_blank">
+                                    <ion-icon name="logo-whatsapp" class="redes"></ion-icon>
+                                </a>
+                                <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                    <ion-icon name="logo-twitter" class="redes"></ion-icon>
+                                </a>
+                                <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                    <ion-icon name="logo-instagram" class="redes"></ion-icon>
+                                </a>
+                            </div>
+
+
+                            <ion-item>
+
+                                <ion-avatar>
+                                    <img class="avatar" alt="Silhouette of a person's head" (click)="login()" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                                </ion-avatar>
+
+
+
+                            </ion-item>
+
+                        </ion-tab-bar>
+                    </ion-tabs>
+
+                </ion-toolbar>
+            </ion-header>
+
+            <!-- inicio del contenido -->
+            <ion-content>
+                <!-- <ion-grid> -->
+                <ion-row>
+                    <!-- inicio slide -->
+                    <ion-col class="colSL" sizeLg="12">
+                        <ion-slides pager="true" class="slide-full" [options]="slideOpts">
+                            <ion-slide *ngFor="let slide of slide">
+                                <img [src]="slide.img" class="slide-image">
+                            </ion-slide>
+
+                        </ion-slides>
+                        <!-- <ion-button class="slide-next-button" (click)="nextSlide()">
+                      <ion-icon name="logo-instagram" class="redes"></ion-icon>
+                  </ion-button> -->
+                    </ion-col>
+                    <!-- fin slide -->
+
+                    <!-- nosotros -->
+                    <ion-row class="fDos ion-justify-content-around ion-justify-content-center ion-align-items-center">
+                        <ion-col class="colNos" size="12" sizeLg="5">
+                            <div class="nosotros">
+                                <ion-text>NOSOTROS</ion-text>
+                            </div>
+                            <div>
+                                <ion-text class="futuro">EL FUTURO DE LOS NEGOCIOS LOCALES</ion-text>
+                            </div>
+                            <ion-text class="info">ECOSISTEMAS es una app diseñada para las PYMES, facilita la adquisisción de produtos y servicios mediante la implementación de catálogos digitales, reservaciones y pago digital seguro. <br> <br> OFRECE TODOS LOS BENEFICIOS
+                                DE UNA APP HECHA A TU MEDIDA CON COSTOS MINIMOS.</ion-text>
+                        </ion-col>
+                        <ion-col size="12" sizeLg="6">
+                            <img class="imgDos" src="../../../../assets/img/dispositivos.png" alt="computadora">
+                        </ion-col>
+                    </ion-row>
+                    <!-- fin nosotros -->
+
+                    <!-- inicio soy cliente -->
+                    <ion-row class="cliente ion-justify-content-around">
+                        <ion-col size="12">
+
+                            <ion-tabs>
+                                <ion-tab-bar slot="bottom">
+                                    <ion-tab-button tab="schedule">
+                                        <ion-icon name="calendar"></ion-icon>
+                                        <ion-label>Schedule</ion-label>
+                                        <ion-badge>6</ion-badge>
+                                    </ion-tab-button>
+
+                                    <ion-tab-button tab="speakers">
+                                        <ion-icon name="person-circle"></ion-icon>
+                                        <ion-label>Speakers</ion-label>
+                                    </ion-tab-button>
+
+                                    <ion-tab-button tab="map">
+                                        <ion-icon name="map"></ion-icon>
+                                        <ion-label>Map</ion-label>
+                                    </ion-tab-button>
+
+                                    <ion-tab-button tab="about">
+                                        <ion-icon name="information-circle"></ion-icon>
+                                        <ion-label>About</ion-label>
+                                    </ion-tab-button>
+                                </ion-tab-bar>
+                            </ion-tabs>
+                        </ion-col>
+                        <ion-col class="colNos" size="12" sizeLg="4">
+                            <div class="futuro ion-text-center">
+                                <ion-text>SOY CLIENTE</ion-text>
+                            </div>
+                            <ion-row>
+                                <ion-col class="serCli" size="12" sizeLg="12">
+                                    <ion-text>SERVICIOS CLIENTES</ion-text>
+                                </ion-col>
+                                <ion-col class="negociosLoc" size="12" sizeLg="12">
+                                    <ion-text>ENCUENTRA Y CONSUME EN CIENTOS DE NEGOCIOS LOCALES.
+                                    </ion-text>
+                                </ion-col>
+
+                                <ion-col class="botDesc">
+                                    <a href="URL del enlace" class="boton2"></a>
+
+                                </ion-col>
+                                <ion-col class="botDesc">
+                                    <a href="URL del enlace" class="boton2 img-fluid"></a>
+                                </ion-col>
+
+                            </ion-row>
+                            <ion-col class="ion-text-center cApp ">
+                                <ion-button shape="round">Conocer la app</ion-button>
+                            </ion-col>
+                        </ion-col>
+
+
+
+                        <ion-col size="12" sizeLg="5">
+                            <div class="negocio ion-text-center">
+                                <ion-text class="Mneg">SOY NEGOCIO</ion-text>
+                            </div>
+                            <ion-row class="ion-justify-content-between">
+                                <ion-col class="ion-text-center" size="12" sizeLg="5">
+                                    <div>
+                                        <ion-icon class="imaCard" name="bulb-outline"></ion-icon>
+                                    </div>
+                                    <div class="mPago">
+                                        <ion-text>PAGA FÁCIL Y SEGURO</ion-text>
+                                    </div>
+                                    <div class="classInfo">
+                                        <ion-text>Ecopay es una tarjeta digital de prepago con la que puedes pagar en cientos de establecimientos dentro de ecosistemas. <br> <br> ¡NO MÁS FRAUDES BANCARIOS, TEN UN MEJOR CONTROL DE TUS GASTOS!</ion-text>
+                                    </div>
+
+                                </ion-col>
+                                <ion-col class="ion-text-center" size="12" sizeLg="5">
+                                    <div>
+                                        <ion-icon class="imaCard" name="bulb-outline"></ion-icon>
+                                    </div>
+                                    <div class="mPago">
+                                        <ion-text>AGENDA TU SERVICIO
+                                        </ion-text>
+                                    </div>
+                                    <div class="classInfo">
+                                        <ion-text>Con ecosistemas puedes agendar facilmente los servicios de tus negocios locales.<br><br>¡ORGANIZA MEJOR TU TIEMPO Y OLVÍDATE DE LOS TIEMPOS EN LA SALA DE ESPERA!</ion-text>
+                                    </div>
+
+                                </ion-col>
+                                <ion-col class="ion-text-center" size="12" sizeLg="5">
+                                    <div>
+                                        <ion-icon class="imaCard" name="bulb-outline"></ion-icon>
+                                    </div>
+                                    <div class="mPago">
+                                        <ion-text>ENCUENTRA LO QUE BUSCAS</ion-text>
+                                    </div>
+                                    <div class="classInfo">
+                                        <ion-text>Busca los negocios cercanos a ti, o tus negocios favoritos y compara servicios, calidad y precio desde cualquier dispositivo móvil. <br><br>¡CIENTOS DE OPCIONES PARACOMPARAR Y COMPRAR!</ion-text>
+                                    </div>
+
+                                </ion-col>
+                                <ion-col class="ion-text-center" size="12" sizeLg="5">
+                                    <div>
+                                        <ion-icon class="imaCard" name="bulb-outline"></ion-icon>
+                                    </div>
+                                    <div class="mPago">
+                                        <ion-text>PROMOCIONES Y DESCUENTOS</ion-text>
+                                    </div>
+                                    <div class="classInfo">
+                                        <ion-text>Las mejores promociones de tus negocios favoritos al usar la app. <br><br> ¡AHORRA EN GRANDE!</ion-text>
+                                    </div>
+
+                                </ion-col>
+                            </ion-row>
+                        </ion-col>
+                    </ion-row>
+
+                </ion-row>
+                <!-- fin soy cliente -->
+                <ion-row>
+                    <ion-col class="colNosNum" size="12" sizeLg="12">
+                        <ion-text>
+                            <h2 class="boldT">YA TENEMOS
+                                <ion-text class="textVerde"> 000,000 </ion-text>ALIADOS EN CDMX Y ÁREA METROPOLITANA
+                            </h2>
+                        </ion-text>
+                    </ion-col>
+                    <ion-col class="colNos carrusel" size="12" sizeLg="11">
+                        <ion-text>
+                            carrusel
+                        </ion-text>
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-row class="fondoInfo ion-text-center" id="bg-image">
+
+                    <ion-col class="ion-margin-vertical" sizeLg="12">
+                        <ion-text class="negociosLoc">¡TU TAMBIÉN PUEDES SER UNO!</ion-text>
+                    </ion-col>
+                    <ion-col class="ion-text-center " size="12" sizeLg="4">
+                        <ion-button shape="round">Conocer la app</ion-button>
+                    </ion-col>
+                    <ion-row class="ion-justify-content-around">
+                        <ion-col sizeLg="5">
+
+                            <ion-text>
+                                <img src="../../../../assets/img/Testimonios.png" class="img-fluid" alt="aliado">
+                            </ion-text>
+
+                        </ion-col>
+                        <ion-col class="alT" size="12" sizeLg="5">
+                            <ion-row>
+                                <ion-col class="serAli" size="12" sizeLg="12">
+                                    <ion-text>ALIADOS</ion-text>
+                                </ion-col>
+                                <ion-col class="negociosAli" size="12" sizeLg="12">
+                                    <ion-text>TESTIMONIO</ion-text>
+                                </ion-col>
+
+                                <ion-col>
+                                    <ion-text class="info">ECOSISTEMAS es una app diseñada para las PYMES, facilita la dquisisción de produtos y servicios mediante la implementación de catálogos digitales, reservaciones y pago digital seguro.<br><br> OFRECE TODOS LOS BENEFICIOS
+                                        DE UNA APP HECHA A TU MEDIDA CON COSTOS MINIMOS.
+                                    </ion-text>
+
+                                </ion-col>
+
+
+                            </ion-row>
+                            <ion-col class="ion-text-center cApp ">
+                                <ion-button shape="round">Conviertete en aliado</ion-button>
+                            </ion-col>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-row>
+
+                <!-- formulario de CONTACTO -->
+                <ion-row class="contacto ion-justify-content-around">
+                    <ion-col class="" size="12" sizeLg="5">
+                        <div class="nosotros ">
+                            <ion-text>CONTACTO</ion-text>
+                        </div>
+                        <div class="futuro">
+                            <ion-text>¡ÚNETE A LA COMUNIDAD ECOSISTEMAS!</ion-text>
+                        </div>
+                        <ion-row>
+                            <ion-col size="12" sizeLg="8" class="colNo textInformes">
+                                <p>+52 55 1234 5678 </p>
+                                <p>ventas@ecosistemas.com</p>
+                                <p>info@ecosistemas.com</p>
+                                <p>Calle #00, col. Nombre, Alcaldía, CDMX, 02200.</p>
+                                <div class="bar bar-footer bar-balanced">
+                                    <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                        <ion-icon name="logo-facebook" class="redes"></ion-icon>
+                                    </a>
+                                    <a href="https://wa.me/5544973237?text=Hola,%20quiero%20hacer%20una%20consulta" class="ion-activatable" target="_blank">
+                                        <ion-icon name="logo-whatsapp" class="redes"></ion-icon>
+                                    </a>
+                                    <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                        <ion-icon name="logo-twitter" class="redes"></ion-icon>
+                                    </a>
+                                    <a href="https://www.google.com.mx/" class="ion-activatable" target="_blank">
+                                        <ion-icon name="logo-instagram" class="redes"></ion-icon>
+                                    </a>
+                                </div>
+
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col size="12" sizeLg="4">
+                        <div class="futuro ion-margin-top ion-text-center">
+                            <ion-text>¡ESCRÍBENOS!</ion-text>
+                        </div>
+                        <form #myForm="ngForm">
+
+                            <ion-input name="nombre" placeholder="Nombre"></ion-input>
+                            <ion-input type="email" name="email" placeholder="Correo electrónico"></ion-input>
+                            <ion-input type="text" name="tel" placeholder="Telefono"></ion-input>
+                            <ion-textarea rows="4" name="descripcion" placeholder="Mensaje"></ion-textarea>
+                            <div class="btn-enviar">
+                                <ion-button class="enviar" shape="round" type="submit">Enviar</ion-button>
+                            </div>
+                        </form>
+                    </ion-col>
+                    <ion-row>
+                        <ion-col sizeLg="12" class="textInformes">
+                            <ion-text>Copyright Ecosistemas 2023 | Desarrollado por ASG</ion-text>
+                        </ion-col>
+                    </ion-row>
+                </ion-row>
+
+
+
+
+                <!-- </ion-grid> -->
+            </ion-content>
+
+
+        </div>
+
+    </ion-split-pane>
+</ion-app>

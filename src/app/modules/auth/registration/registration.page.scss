@@ -1,0 +1,86 @@
+ion-grid.style-grid-register {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-content: center !important;
+    height: 100% !important;
+}
+
+ion-col.style-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.style-form-register {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+ion-input.style-input-register {
+    background: #B9E3EA !important;
+    border-radius: 22px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+ion-label.style-obligatorios {
+    color: red !important;
+}
+
+ion-datetime-button.style-input-register {
+    background: #52bdc0 !important;
+    border-radius: 22px !important;
+    padding-left: 15px !important;
+    padding-right: 10px !important;
+}
+
+ion-icon.style-input-register-icon {
+    border-radius: 22px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    background: #B9E3EA !important;
+    align-self: center;
+}
+
+//para el error
+ion-label.error-text {
+    color: #eb445a !important;
+    font-size: 13px;
+}
+
+ion-note.error-label {
+    color: #eb445a !important;
+    font-size: 12px;
+}
+
+
+ion-modal.calendar-modal {
+    &.center {
+        --width: calc(100% - 2em);
+        align-items: center;
+        --height: auto;
+        .ion-page {
+            position: relative;
+            display: block;
+            contain: content;
+        }
+    }
+}
+
+ion-label {
+    --color: #9FA2AF !important;
+}
+
+.calendar-input-value {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+ion-checkbox.check-space {
+    margin-right: 3%;
+    height: 20px;
+    width: 30px;
+}

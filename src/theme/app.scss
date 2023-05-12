@@ -1,0 +1,207 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ */
+
+
+/* Variables */
+
+:root {
+    /** Header styles **/
+    --eco-border-radius: 30px;
+}
+
+
+/* Global Custom Fonts */
+
+@font-face {
+    font-family: 'AcuminRegular'; //This is what we are going to call
+    src: url('../assets/fonts/Acumin-RPro.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AcuminBold'; //This is what we are going to call
+    src: url('../assets/fonts/Acumin-BdPro.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AcuminItalic'; //This is what we are going to call
+    src: url('../assets/fonts/Acumin-ItPro.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AcuminBoldItalic'; //This is what we are going to call
+    src: url('../assets/fonts/Acumin-BdItPro.otf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AcuminBlack'; //This is what we are going to call
+    src: url('../assets/fonts/Acumin-BlackPro.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option,
+p,
+a {
+    font-family: "AcuminRegular", sans-serif;
+}
+
+h1 {
+    font-family: "AcuminBold", sans-serif;
+    font-size: 22.7pt;
+}
+
+h2 {
+    font-family: "AcuminRegular", sans-serif;
+    font-size: 20pt;
+}
+
+h2 {
+    font-family: "AcuminBold", sans-serif;
+    font-size: 16pt;
+}
+
+p {
+    font-family: "AcuminRegular", sans-serif;
+    font-size: 13pt;
+}
+
+a {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+}
+
+ion-content {
+    --background: none;
+    background-image: url('/assets/svg/Fondo 1080x820.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Buttons */
+
+ion-button {
+    --box-shadow: none;
+}
+
+ion-item {
+    --background: transparent;
+}
+
+
+/* Header START */
+
+
+/* Remove shadow from header*/
+
+ion-header:after {
+    background-image: none !important;
+}
+
+
+/* Add top left rounded curve */
+
+ion-header:after {
+    content: ""!important;
+    position: absolute !important;
+    bottom: 0px!important;
+    left: 0 !important;
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: var(--eco-border-radius) 0px 0px 0px;
+    background: white;
+    box-shadow: 0px -20px 0 0 #f1f1f1;
+}
+
+
+/* Header END*/
+
+
+/* Titles */
+
+ion-title {
+    color: var(--ion-color-primary-contrast);
+}
+
+
+/* Toolbar top */
+
+ion-toolbar {
+    --background: #F1F1F1;
+    // border-radius: 0px 0px 20px 0px;
+    // border-bottom-right-radius: var(--eco-border-radius);
+}
+
+
+/* Checkbox styles */
+
+ion-checkbox {
+    --background-checked: transparent;
+    --checkmark-color: var(--ion-color-primary);
+}
+
+ion-checkbox::part(container) {
+    border-radius: 50%;
+    border: 2px solid var(--ion-color-primary);
+}
+
+.round-top-left {
+    border-top-left-radius: var(--eco-border-radius);
+}
+
+
+/* Center ion-grid within ion-content START*/
+
+.main-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-grid ion-row {
+    width: 100% !important;
+}
+
+
+/* Center ion-grid within ion-content END*/
+
+#logo {
+    max-width: 200px;
+    margin: auto;
+}
+
+.space-around-inline-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle {
+    color: #cdcccc;
+    font-weight: bold;
+}
+
+.privacy-statement {
+    font-size: 10pt;
+    text-align: justify;
+}

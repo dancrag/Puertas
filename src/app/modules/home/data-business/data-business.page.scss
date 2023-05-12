@@ -1,0 +1,110 @@
+
+ion-button.style-button {
+    font-size: medium !important;
+    height: 36px !important;
+    width: 140px !important;
+    text-transform: none !important;
+    color: white !important;
+}
+
+img.style-thumbnail  {
+    border-bottom-left-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+}
+
+ion-checkbox::part(container) {
+    border-radius: 0px;
+    border: 1px solid #1e2648;
+    --checkmark-color: #1e2648 !important;
+}
+
+ion-chip.style-days {
+    width: 35px !important;
+    height: 35px !important;
+    font-weight: bold !important;
+    border-radius: 22px !important;
+    align-items: center !important;
+    font-size: 15px !important;
+    justify-content: center !important;
+    margin-right: 10px !important;
+}
+
+
+.select-time {
+    width: 94px;
+    height: 31px;
+}
+
+/*
+.select-icon-inner {
+    left: 60%;
+    top: 56%;
+    margin-top: -2px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: currentcolor;
+    pointer-events: none;
+}
+*/
+
+ion-datetime-button::part(native) {
+    border-radius: 22px !important;
+    //background: #52bdc0 !important;
+    background: rgb(185, 227, 234) !important;
+    color: #1e2648 !important;
+    width: 100px !important;
+    height: 40px !important;
+}
+
+
+ion-datetime-button.datetime-button-disabled{
+    --opacity: 0 !important;
+    --ion-color-step-300: #e1e2e1 !important;
+    pointer-events: none !important;
+}
+
+.logo-link-style{
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+//para el select
+ion-select {
+    background-color: rgb(185, 227, 234) !important;
+    --placeholder-color: #1e2648 !important;
+    color: #1e2648 !important;
+    border-radius: 22px !important;
+    text-align: justify !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-right: 16px;
+    //padding-bottom: -4px !important;
+    //padding-top: -114px !important;
+    
+}
+
+ion-note.ion-note-select {
+    color: #eb445a !important;
+    font-size: 12px;
+}
+
+.style-center {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.style-carga {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.style-title {
+    display: flex !important;
+    align-items: center !important;
+}

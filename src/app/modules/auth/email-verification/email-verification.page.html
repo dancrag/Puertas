@@ -1,0 +1,50 @@
+<ion-app>
+  <!-- <ion-header>
+      <ion-toolbar>
+          <ion-title class="ion-text-center">Confirma tu correo</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content class="round-top-left">
+      <ion-grid [fixed]="true" class="main-grid ion-justify-content-center ion-align-items-center">
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              Para poder confirmar tu correo da click en el link que se envió
+              <br/><br/>No olvides checar tu bandeja de correo no deseado o spam.
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="resendEmailVerification()">Reenviar correo de verificación</ion-button>
+            <ion-button (click)="logout()">Ya verifiqué mi correo</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-content> -->
+  <ion-content>
+    <ion-grid class="style-grid">
+      <ion-row>
+        <ion-col class="style-logo">
+          <ion-img id="logo" src="assets/svg/correo-amarillo.svg" alt="logo-image" />
+        </ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col class="style-column">
+          <ion-item lines="none" class="style-business">
+            <ion-img id="business" src="assets/svg/NEGOCIO-amarillo.svg" alt="business-image" />
+          </ion-item>
+          <ion-item lines="none">
+            <h1 class="ion-text-center">Confirma tu correo electrónico</h1>
+          </ion-item>
+          <ion-item lines="none">
+            <p class="ion-text-center">Gracias por registrarte, se envió un correo de confirmación. Para acceder a tu
+              cuenta, presiona botón de "Entrar".</p>
+          </ion-item>
+          <ion-row>
+            <ion-button class="style-enter" shape="round" (click)="logout()">Entrar</ion-button>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>

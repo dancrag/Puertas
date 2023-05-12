@@ -1,0 +1,37 @@
+<ion-app>
+    <ion-content>
+        <ion-grid class="style-grid">
+            <ion-row>
+                <ion-col class="style-logo">
+                    <ion-img id="logo" src="assets/svg/logo-transparent.svg" alt="logo-image" />
+                </ion-col>
+                <ion-col class="style-column">
+                    <ion-item lines="none" class="style-business">
+                        <ion-img id="business" src="assets/svg/NEGOCIO-amarillo.svg" alt="business-image" />
+                    </ion-item>
+                    <ion-item lines="none">
+                        <h1 class="ion-text-center" style="margin-bottom: 20px;">Selecciona el perfil de tu negocio</h1>
+                    </ion-item>
+                    <form [formGroup]="businessForm" (ngSubmit)="next()" class="style-form-select-business">
+                        <ion-col>
+                            <ion-col>
+                                <ion-select interface="popover" placeholder="Perfil de negocio *"
+                                    formControlName="businessType" (ngModelChange)="onChange($event)"
+                                    class="style-select-business">
+                                    <ion-select-option *ngFor="let bt of businessTypeList" [value]="bt">
+                                        {{ bt.name }}</ion-select-option>
+                                </ion-select>
+                                <ion-note class="ion-note-select" color="danger"
+                                    *ngIf="businessType && isSubmitted && businessType.value===null">Seleccione uno de
+                                    sus negocios</ion-note>
+                            </ion-col>
+                            <ion-col class="ion-padding style-col-next" lines="none">
+                                <ion-button shape="round" type="submit" class="style-buttons">Siguiente</ion-button>
+                            </ion-col>
+                        </ion-col>
+                    </form>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+</ion-app>

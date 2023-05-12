@@ -1,0 +1,94 @@
+<ion-buttons slot="start">
+    <ion-button (click)="back()">
+        <ion-icon slot="icon-only" src="assets/svg/back-icon.svg"></ion-icon>
+    </ion-button>
+</ion-buttons>
+<!-- <pre>{{registration.value | json}}</pre> -->
+<ion-app>
+    <ion-content class="ion-padding">
+        <ion-grid class="style-grid-register">
+            <ion-row>
+                <ion-col class="style-logo">
+                    <ion-img id="logo" src="assets/svg/logo-transparent.svg" alt="logo-image" />
+                </ion-col>
+                <ion-col>
+                    <div class="ion-text-center">
+                        <h1 *ngIf="!dataService.isAdmin">Registro de usuario</h1>
+                        <h1 *ngIf="dataService.isAdmin">Registro de Administrador</h1>
+                    </div>
+                    <form [formGroup]="registration" (ngSubmit)="register()" class="style-form-register">
+
+                        <ion-item lines="none">
+                            <ion-input type="text" placeholder="Nombre(s) *" formControlName="name"
+                                class="style-input-register" maxlength="90" />
+                            <ion-note slot="error" *ngIf="name && isSubmitted && name.value.length<=0">El nombre es
+                                requerido</ion-note>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-input type="text" placeholder="Primer apellido *" formControlName="first_family_name"
+                                class="style-input-register" maxlength="90" />
+                            <ion-note slot="error"
+                                *ngIf="first_family_name && isSubmitted && first_family_name.value.length<=0">El primer
+                                apellido es requerido</ion-note>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-input value="{{registration.value.dob | date: 'dd-MM-yyyy'}}"
+                                placeholder="Fecha de nacimiento *" id="date" class="style-input-register">
+                                <ion-icon src="assets/svg/calendary.svg" class="style-input-register-icon"></ion-icon>
+                            </ion-input>
+
+                            <ion-popover trigger="date" size="cover">
+                                <ng-template>
+                                    <ion-datetime presentation="date" formControlName="dob" locale="es-MX">
+                                    </ion-datetime>
+                                </ng-template>
+                            </ion-popover>
+                            <ion-label class="error-text" slot="error" *ngIf="dob && isSubmitted && dob.errors">La fecha
+                                de nacimiento es requerida</ion-label>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-input type="email" placeholder="Correo electrónico *" formControlName="email"
+                                class="style-input-register" maxlength="90" />
+                            <ion-note slot="error" *ngIf="email && isSubmitted && email.value.length<=0">El email es
+                                requerido</ion-note>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-input type="password" placeholder="Contraseña *" formControlName="password"
+                                class="style-input-register" maxlength="50" />
+                            <ion-note slot="error" *ngIf="password && isSubmitted && password.value.length<=0">El
+                                password es requerido</ion-note>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-input type="password" placeholder="Confirmar contraseña *"
+                                formControlName="password_confirm" class="style-input-register" maxlength="50" />
+                            <ion-note slot="error"
+                                *ngIf="password_confirm && isSubmitted && password_confirm.value.length<=0">Confirmación
+                                del password es requerido</ion-note>
+                        </ion-item>
+
+                        <ion-item lines="none">
+                            <ion-checkbox formControlName="agreement" class="check-space"></ion-checkbox>
+                            <p class="privacy-statement">Acepto el <app-privacy-policy></app-privacy-policy> y confirmo
+                                que he leído los
+                                <app-terms-and-conditions></app-terms-and-conditions>
+                            </p>
+                            <ion-label class="error-text" slot="error"
+                                *ngIf="agreement && isSubmitted && agreement.errors">Debes aceptar los terminos y
+                                condiciones</ion-label>
+                        </ion-item>
+
+                        <div class="center-content">
+                            <ion-button shape="round" type="submit" class="style-buttons">Registrarse</ion-button>
+                        </div>
+
+                    </form>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+</ion-app>

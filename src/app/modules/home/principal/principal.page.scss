@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../../../../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'montse';
+    src: url('../../../../assets/fonts/Montserrat-Medium.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    font-family: 'montserrat';
+}
+
+.menuOp {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* ion-item {
+    --background: #5BB5B5;
+} */
+
+.header {
+    --background: #5BB5B5;
+}
+
+ion-toolbar {
+    border-radius: 0;
+}
+
+
+/* estilos de iconos de redes socilaes */
+
+.redes {
+    font-size: 15px;
+    color: #fff;
+    margin: 2px;
+    border-radius: 50px;
+    background: #F5A31F;
+    padding: 3px;
+}
+
+
+/* estilos slide */
+
+.colSL {
+    margin: 0;
+    padding: 0;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+
+/* estilos de seccion nosotros */
+
+.fDos {
+    background: url('../../../../assets/img/fondoDos.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.imgDos {
+    padding: 50px;
+}
+
+.colNos {
+    margin-left: 60px;
+}
+
+.nosotros {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 25px 0;
+    font-size: 16px;
+}
+
+.futuro {
+    font-family: montserrat;
+    display: block;
+    margin-bottom: 45px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.info {
+    font-size: 16px;
+    line-height: .3cm;
+    font-weight: bold;
+    font-family: montserrat;
+}
+
+
+/* fin seccion nosotros */
+
+
+/* inicio de soy cliente */
+
+.cliente {
+    background: url('../../../../assets/img/fondoCliente.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.negociosLoc {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: montserrat;
+    margin-left: 20px;
+}
+
+.serCli {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 80px;
+}
+
+.boton2 {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    background: url('../../../../assets/img/play.png');
+    border-radius: 5px;
+    text-align: center;
+    background-size: cover;
+}
+
+.botDesc {
+    padding: 18px;
+    margin-top: 70px;
+}
+
+
+/* 
+ion-button {
+    display: inline-block;
+    --background: #2ad1cc;
+    width: 45%;
+    text-align: center;
+}
+
+ion-button:hover {
+    --background: #F5A31F;
+} */
+
+.cApp {
+    display: block;
+    margin-top: 40px;
+}
+
+.negocio {
+    font-family: montserrat;
+    margin-bottom: 45px;
+    padding: 5px;
+    background: #42d4d9;
+}
+
+.Mneg {
+    font-weight: 600;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+/* estilos tipo cards */
+
+.alT {
+    text-align: justify;
+}
+
+.mPago {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 5px;
+}
+
+.classInfo {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.imaCard {
+    font-size: 70px;
+    color: #172741;
+}
+
+.imaCard:hover {
+    color: #F5A31F;
+}
+
+
+/* fin estilos tipo cards */
+
+.textVerde {
+    color: #52bdc0;
+}
+
+.bold {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* 
+ estilos carrusel */
+
+.colNosNum {
+    margin-left: 180px;
+}
+
+.carrusel {
+    background-color: #EBEDEF;
+    padding: 30px;
+}
+
+
+/* 
+estilos carrusel */
+
+.fondoInfo {
+    background: url('../../../../assets/img/fondoTres.png');
+    background-size: cover;
+    background-position: top;
+}
+
+.boldT {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.serAli {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 80px;
+}
+
+.negociosAli {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: montserrat;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.ion-margin-horizontal {
+    color: #fff;
+}
+
+
+/* estilos de forulario de contacto */
+
+.contacto {
+    background: #2ad1cc;
+}
+
+.textInformes {
+    color: #EBEDEF;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+ion-input {
+    border-radius: 15px;
+    font-size: 12px;
+    color: #424949;
+    background: #d0e5ec;
+    height: 30px;
+    margin: 10px 0;
+}
+
+ion-input:focus {
+    outline: none;
+}
+
+ion-item {
+    background: none;
+}
+
+ion-textarea {
+    border-radius: 15px;
+    font-size: 12px;
+    color: #424949;
+    background: #d0e5ec;
+    height: 30px;
+    min-height: 80px;
+}
+
+ion-slides {
+    --bullet-background-active: #52bdc0;
+}
+
+.btn-enviar {
+    text-align: center;
+    padding: 10px;
+}
+
+.enviar {
+    --background: #d0e5ec;
+    color: #172741;
+    border-radius: 20px;
+}
