@@ -1,0 +1,101 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/*
+*   App CSS - Global CSS
+*/
+
+@import "./theme/app.scss";
+
+//Styles Catálogos
+.md .hydrated {
+    border-bottom: none !important;
+    --background-hover: none !important;
+}
+
+.title-label {
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+.style-form {
+    border: solid 2px !important;
+    border-radius: 22px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ion-tab-bar.style-tab {
+    --background: transparent !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+ion-input.custom {
+    //--background: #52bdc0;
+    --background: rgb(185, 227, 234);
+    --placeholder-color: #1e2648 !important;
+    border-radius: 22px !important;
+    text-align: justify !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+ion-datetime {
+    --background: #F8F9F9;
+    //color: #52bdc0;
+    color: rgb(185, 227, 234);
+}
+
+ion-button.style-buttons {
+    --background: #52bdc0 !important;
+    --color: white !important;
+    text-transform: none !important;
+    font-size: medium !important;
+}
+
+
+ion-menu.custom {
+    --background: #52bdc0;
+}
+
+ion-menu.custom {
+    --background: #52bdc0;
+}
+
+ion-toolbar {
+    --background: #52bdc0;
+}
+
+
+ion-toolbar.header-menu {
+    --background: #FFFFFF;
+}
